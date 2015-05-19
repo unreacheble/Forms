@@ -27,7 +27,7 @@ class AbstractForm implements FormInterface{
     public function __get($name)
     {
         if(isset($this->fields[$name])){
-            return $this->fields[$name]->getValue();
+            return $this->fields[$name];
         }else{
             return "Cant find field {$name}.";
         }

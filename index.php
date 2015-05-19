@@ -11,12 +11,16 @@ function __autoload($className) {
 }
 
 $form = new \Forms\TestForm();
-$form->addField('name', 'name');
+$form->addField('email', 'email');
 $form->addField('name', 's_name');
 $form->addField('name', 'f_name');
+$form->email->addValidateRule(['validator'=>'notEmpty']);
 
-$form->name = "qwe";
-$form->s_name = "ssss";
-$form->f_name = "";
+
+$form->email = "asdasdasd@qws.ss";
+$form->s_name = "";
+$form->f_name = "asd";
+
+
 $form->submit();
 ?>
