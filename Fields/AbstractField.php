@@ -34,7 +34,7 @@ abstract class AbstractField {
      */
     public function getType()
     {
-        if(empty($type)){
+        if(empty($this->type)){
             $this->type = 'text'; // По умолчанию тип поля текст
         }
         return $this->type;
